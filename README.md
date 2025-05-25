@@ -13,18 +13,19 @@
 
 - Obtain all symbol information without source code and symbol information.
 - Inject arbitrary code into the kernel. (Static patching the kernel image or Runtime dynamic loading).
-- Kernel function inline hook and syscall table hook are provided.
-- Additional SU for Android.
+- Kernel function `inline-hook` and `syscall-table-hook` are provided.
+- Additional `su` for Android (SuperUser).
 
 If you are using Android, [APatch](https://github.com/bmax121/APatch) would be a better choice.
 
-## Requirement
+## Requirements
 
-CONFIG_KALLSYMS=y  
+Kernel config supporting the
+`CONFIG_KALLSYMS=y`  
 
 ## Supported Versions
 
-Currently only supports arm64 architecture.  
+Currently only supports ARM64 architecture.  
 
 Linux 3.18 - 6.6 (theoretically)  
 
@@ -37,9 +38,9 @@ Linux 3.18 - 6.6 (theoretically)
 ## Credits
 
 - [vmlinux-to-elf](https://github.com/marin-m/vmlinux-to-elf): Some ideas for parsing kernel symbols.
-- [android-inline-hook](https://github.com/bytedance/android-inline-hook): Some code for fixing arm64 inline hook instructions.
-- [tlsf](https://github.com/mattconte/tlsf): Memory allocator used for KPM. (Need another to allocate ROX memory.)
+- [android-inline-hook](https://github.com/bytedance/android-inline-hook): Some code for fixing ARM64 inline-hook instructions.
+- [tlsf](https://github.com/mattconte/tlsf): Memory allocator used for `KPM`. (Need another to allocate ROX memory.)
 
 ## License
 
-KernelPatch is licensed under the **GNU General Public License (GPL) 2.0** (<https://www.gnu.org/licenses/old-licenses/gpl-2.0.html>).
+`KernelPatch` is licensed under the **GNU General Public License (GPL) 2.0** (<https://www.gnu.org/licenses/old-licenses/gpl-2.0.html>)
